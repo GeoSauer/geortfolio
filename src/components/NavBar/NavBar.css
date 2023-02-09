@@ -1,0 +1,53 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 4em;
+  width: 100%;
+}
+
+.nav-contents {
+  animation: slide-out 1s ease-in-out;
+  /* display: none; */
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+  justify-content: space-around;
+  margin-top: 10px;
+  /* max-width: 1200px; */
+  top: 0;
+  width: 100%;
+}
+
+.expanded {
+  align-items: center;
+  animation: slide-in 1s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hamburger {
+  align-items: flex-end;
+  background-color: transparent;
+  border: none;
+  display: flex;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-150%);
+  }
+}

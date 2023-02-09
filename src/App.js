@@ -8,7 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/connect" component={Connect} />
         <Route path="*" component={Home} />
       </Switch>
-    </>
+    </div>
   );
 }
 
