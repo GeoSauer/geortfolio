@@ -8,23 +8,26 @@
 
 .nav-contents {
   animation: slide-out 1s ease-in-out;
-  /* display: none; */
+  animation-fill-mode: forwards;
   display: flex;
   flex-direction: row;
   font-size: 2em;
   justify-content: space-around;
   margin-top: 10px;
-  /* max-width: 1200px; */
   top: 0;
   width: 100%;
 }
 
 .expanded {
   align-items: center;
-  animation: slide-in 1s ease-in-out;
+  animation: slide-in 1.5s ease-in-out;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.nav a {
+  text-decoration: none;
 }
 
 .hamburger {
@@ -32,6 +35,18 @@
   background-color: transparent;
   border: none;
   display: flex;
+}
+
+@media (min-width: 700px) {
+  .nav-img {
+    display: none;
+  }
+}
+
+@media (max-width: 699px) {
+  .nav-text {
+    display: none;
+  }
 }
 
 @keyframes slide-in {
@@ -48,6 +63,6 @@
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-150%);
+    transform: translateX(-125%);
   }
 }
