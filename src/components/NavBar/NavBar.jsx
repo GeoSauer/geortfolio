@@ -1,7 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
+import { Squash as Hamburger } from 'hamburger-react';
 import './NavBar.css';
+import { useState } from 'react';
 
 export default function NavBar() {
+  const [navIsExpanded, setNavIsExpanded] = useState(false);
+
   return (
     <div>
       <nav className="fancy-ternary-toggle">
@@ -20,6 +24,22 @@ export default function NavBar() {
         <a href="" target="_blank">
           Resume
         </a>
+        <Hamburger
+          size={32}
+          duration={0.3}
+          distance="md"
+          color="black"
+          easing="ease-in"
+          rounded
+          label="Show menu"
+          onToggle={(toggled) => {
+            if (toggled) {
+              setNavIsExpanded(true);
+            } else {
+              setNavIsExpanded(false);
+            }
+          }}
+        />
       </nav>
     </div>
   );
