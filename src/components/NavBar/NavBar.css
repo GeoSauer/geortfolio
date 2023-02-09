@@ -1,4 +1,4 @@
-.nav {
+.navbar {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -26,8 +26,16 @@
   justify-content: space-around;
 }
 
-.nav a {
+.navbar a {
   text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-img {
+  height: 30px;
 }
 
 .hamburger {
