@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 * {
-  --color1: ;
-  --color2: ;
-  --color3: ;
-  --color4: ;
-  --color5: ;
+  --verdigris: #05a8aa;
+  --lavender-blush: #f0e2e7;
+  --space-cadet: #3b3b58;
+  --flame: #dc602e;
+  --persian-red: #bc412b;
   font-family: 'Oswald', sans-serif;
 }
 

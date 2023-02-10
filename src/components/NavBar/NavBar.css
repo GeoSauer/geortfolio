@@ -7,8 +7,6 @@
 }
 
 .nav-contents {
-  animation: slide-out 1s ease-in-out;
-  animation-fill-mode: forwards;
   display: flex;
   flex-direction: row;
   font-size: 2em;
@@ -16,6 +14,11 @@
   margin-top: 10px;
   top: 0;
   width: 100%;
+}
+
+.collapsed {
+  animation: slide-out 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .expanded {

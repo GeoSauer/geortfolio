@@ -1,10 +1,11 @@
+/* eslint-disable indent */
 import { Link, NavLink } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import './NavBar.css';
 
 export default function NavBar() {
-  const [navIsExpanded, setNavIsExpanded] = useState(false);
+  const [navIsExpanded, setNavIsExpanded] = useState(null);
 
   return (
     <div className="navbar">
@@ -27,7 +28,15 @@ export default function NavBar() {
         />
       </button>
 
-      <nav className={navIsExpanded ? 'nav-contents expanded' : 'nav-contents'}>
+      <nav
+        className={
+          navIsExpanded === null
+            ? 'hidden'
+            : navIsExpanded
+            ? 'nav-contents expanded'
+            : 'nav-contents collapsed'
+        }
+      >
         <NavLink exact to="/">
           <span className="nav-text">Home</span>
           <img src="/home.png" alt="Home" className="nav-img" />
