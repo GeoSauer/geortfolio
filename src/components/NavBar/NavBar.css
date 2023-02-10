@@ -7,8 +7,8 @@
 }
 
 .nav-contents {
+  align-items: center;
   display: flex;
-  flex-direction: row;
   font-size: 2em;
   justify-content: space-around;
   margin-top: 10px;
@@ -16,25 +16,8 @@
   width: 100%;
 }
 
-.collapsed {
-  animation: slide-out 1s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.expanded {
-  align-items: center;
-  animation: slide-in 1.5s ease-in-out;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 .navbar a {
   text-decoration: none;
-}
-
-.hidden {
-  display: none;
 }
 
 .nav-img {
@@ -48,6 +31,41 @@
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
+/* -------------- animation -------------- */
+
+.collapsed {
+  animation: collapse 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.expanded {
+  animation: expand 1.5s ease-in-out;
+}
+
+@keyframes expand {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes collapse {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-125%);
+  }
+}
+
+/* -------------- viewport -------------- */
+
 @media (min-width: 700px) {
   .nav-img {
     display: none;
@@ -57,23 +75,5 @@
 @media (max-width: 699px) {
   .nav-text {
     display: none;
-  }
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes slide-out {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-125%);
   }
 }
