@@ -15,9 +15,10 @@ body::-webkit-scrollbar {
 
 .App {
   align-items: center;
+  background-color: var(--flame);
   display: flex;
   flex-direction: column;
-  height: fit-content;
+  height: 100vh;
 }
 
 body,

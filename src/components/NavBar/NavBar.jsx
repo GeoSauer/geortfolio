@@ -14,7 +14,7 @@ export default function NavBar() {
           size={30}
           duration={1.3}
           distance="sm"
-          color="black"
+          color="var(--space-cadet)"
           easing="ease-in"
           rounded
           label="Show menu"
