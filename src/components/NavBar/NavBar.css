@@ -69,12 +69,14 @@
 
 /* -------------- viewport -------------- */
 
+/* desktop */
 @media (min-width: 700px) {
   .nav-img {
     display: none;
   }
 }
 
+/* mobile */
 @media (max-width: 699px) {
   .nav-text {
     display: none;
